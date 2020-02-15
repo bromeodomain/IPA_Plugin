@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'token_to_picture',
     'rest_framework',
     'corsheaders',
+    'english_to_ipa',
 ]
 
 MIDDLEWARE = [
