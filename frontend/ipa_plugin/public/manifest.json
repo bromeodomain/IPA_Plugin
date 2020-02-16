@@ -26,11 +26,9 @@
         "<all_urls>"
       ],
       "js": [
-        "/static/js/2.chunk.js",
-        "/static/js/main.chunk.js",
-        "/static/js/runtime-main.js",
         "/contentScript.js",
-        "/contentScript2.js"
+        "/contentScript2.js",
+        "/TranslationTesting.js"
       ],
       "css": [
         "/static/css/main.chunk.css",
@@ -41,7 +39,6 @@
   ],
   "web_accessible_resources": [
     "index.html",
-    "toolbar.html",
     "sidebar.html"
   ]
 }

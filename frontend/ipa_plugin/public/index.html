@@ -64,20 +64,15 @@
 </head>
 <body>
 <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root">
-        <div style="background: lightgrey; height: 100%;">
-            <div class="outs" style="height: 300px; width: 90%;">
-                <div id="text-out">
-                    <p>hi hi hi</p>
-                </div>
-                <h5>Hi!</h5>
-            </div>
-            <div class="outs" style="height: 500px; width: 90%">
-                <div id="vis-out">
-                </div>
-            </div>
-        </div>
-    </div>
 
+<script defer type="text/babel">
+    ReactDOM.render(
+        <TranslationTesting/>,
+        document.getElementById('root'));
+</script>
+
+<div id="root">
+</div>
+<script src="js/main.chunk.js.map" type="text/jsx"></script>
 </body>
 </html>
