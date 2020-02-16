@@ -1,7 +1,8 @@
 {
-    "name": "IPA Plugin",
+    "name": "IPA+",
     "version": "1.0",
     "description": "IPA Plugin for Chrome for learning a second language and improving pronunciation",
+    "content_security_policy": "script-src 'self' 'sha256-GgRxrVOKNdB4LrRsVPDSbzvfdV4UqglmviH9GoBJ5jk='; object-src 'self'",
     "permissions": [
         "activeTab",
         "storage",
