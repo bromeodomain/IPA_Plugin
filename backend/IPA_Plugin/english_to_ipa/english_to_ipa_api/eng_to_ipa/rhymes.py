@@ -1,5 +1,5 @@
 # Simple rhyming support. Call get_rhymes() on a word to find rhymes from the CMU dictionary.
-from eng_to_ipa.transcribe import mode_type, get_cmu, preprocess
+from english_to_ipa.english_to_ipa_api.eng_to_ipa.transcribe import mode_type, get_cmu, preprocess
 
 
 def remove_onset(word_in):
@@ -16,7 +16,7 @@ def get_rhymes(word, mode="sql"):
     phones_full = get_cmu([preprocess(word)])[0][0]
     if mode == "sql":
         c = mode_type(mode)
-        c.execute("SELECT word, phonemes FROM dictionary WHERE phonemes " 
+        c.execute("SELECT word, phonemes FROM dictionary WHERE phonemes "
                   "LIKE \"%{0}\" AND NOT word=\"{1}\" ".format(phones, word) +
                   "AND NOT phonemes=\"{0}\"".format(phones_full))
         # also don't return results that are the same but spelled differently

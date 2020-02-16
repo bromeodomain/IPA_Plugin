@@ -16,15 +16,16 @@ const getSelectedText = (text) => {
 
 // obtain image url --> output image
 const displayImage = (ipa) => {
-    let IPAImage = "https://localhost:8000/api/{ipa}";
-
+    let IPAImage = `http://localhost:8000/api/${ipa}`;
+    var data;
     axios.get(IPAImage)
         .then(response => {
-            console.log(response);
+            console.log('here');
+            return response.data.image;
         }, error => {
             console.error(error);
         });
 };
+// return {getSelectedText, displayImage};
 
-return {getSelectedText, displayImage};
-
+export default displayImage;
