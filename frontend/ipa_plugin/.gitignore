@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# pycache
+__pycache_
+../../backend/IPA_Plugin/english_to_ipa/__pycache_
+../../backend/IPA_Plugin/IPA_Plugin/__pycache__
