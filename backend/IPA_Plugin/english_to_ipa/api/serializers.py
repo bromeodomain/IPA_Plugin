@@ -14,6 +14,10 @@ class TranslationSerializer(serializers.ModelSerializer):
         return super(TranslationSerializer, self).create(data)
 
     def update(self, instance, validated_data):
+        if validated_data == {}:
+            print("no validated_data")
+        else:
+            print("validated_data")
         data = validated_data.copy()
         data['original_text'] = validated_data['original_text']
         data['translated_text'] = ipa.convert(validated_data['original_text'])
