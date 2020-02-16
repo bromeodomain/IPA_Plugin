@@ -11,14 +11,14 @@
     "http://*/*",
     "tabs"
   ],
-  "browser_action": {
-    "default_title": "Toggle IPA Plugin",
-    "default_popup": "index.html"
-  },
-
   "background": {
-    "scripts": ["js/background.js"],
+    "scripts": [
+      "background.js"
+    ],
     "persistent": false
+  },
+  "browser_action": {
+    "default_title": "Toggle IPA Plugin"
   },
   "content_scripts": [
     {
@@ -26,15 +26,21 @@
         "<all_urls>"
       ],
       "js": [
-        "js/contentScript.js",
-        "js/contentScript2.js"
+        "/static/js/2.chunk.js",
+        "/static/js/main.chunk.js",
+        "/static/js/runtime-main.js",
+        "/contentScript.js",
+        "/contentScript2.js"
       ],
-      "css": ["css/restyle.css"],
+      "css": [
+        "/static/css/main.chunk.css",
+        "/restyle.css"
+      ],
       "all_frames": true
     }
   ],
   "web_accessible_resources": [
-    "html/toolbar.html",
-    "html/sidebar.html"
+    "/toolbar.html",
+    "/sidebar.html"
   ]
 }
