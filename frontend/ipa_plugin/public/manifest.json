@@ -1,25 +1,40 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
+  "name": "IPA+",
+  "version": "1.0",
+  "description": "IPA Plugin for Chrome for learning a second language and improving pronunciation",
+  "content_security_policy": "script-src 'self' 'sha256-GgRxrVOKNdB4LrRsVPDSbzvfdV4UqglmviH9GoBJ5jk='; object-src 'self'",
+  "manifest_version": 2,
+  "permissions": [
+    "activeTab",
+    "storage",
+    "https://*/*",
+    "http://*/*",
+    "tabs"
+  ],
+  "browser_action": {
+    "default_title": "Toggle IPA Plugin",
+    "default_popup": "index.html"
+  },
+
+  "background": {
+    "scripts": ["js/background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "js/contentScript.js",
+        "js/contentScript2.js"
+      ],
+      "css": ["css/restyle.css"],
+      "all_frames": true
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "web_accessible_resources": [
+    "html/toolbar.html",
+    "html/sidebar.html"
+  ]
 }
