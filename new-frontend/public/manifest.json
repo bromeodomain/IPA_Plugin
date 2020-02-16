@@ -1,0 +1,30 @@
+{
+  "short_name": "My Extension",
+  "name": "IPA+",
+  "version": "1.0",
+  "description": "IPA Plugin for Chrome for learning a second language and improving pronunciation",
+  "content_security_policy": "script-src 'self' 'sha256-GgRxrVOKNdB4LrRsVPDSbzvfdV4UqglmviH9GoBJ5jk='; object-src 'self'",
+  "manifest_version": 2,
+  "permissions": [
+    "activeTab",
+    "storage",
+    "https://*/*",
+    "http://*/*",
+    "tabs"
+  ],
+  "background": {
+    "scripts": ["app/background.js"]
+  },
+  "browser_action": {"default_title": "Toggle IPA Plugin"},
+  "content_scripts" : [
+    {
+      "matches": [ "<all_urls>" ],
+      "css": ["/static/css/app.css"],
+      "js": ["/static/js/content.js"]
+    }
+  ],
+  "web_accessible_resources":[
+    "/static/css/content.css", "/static/html/index.html", "/static/html/sidebar.html"
+  ],
+  "content_security_policy": "script-src 'self' 'sha256-GgRxrVOKNdB4LrRsVPDSbzvfdV4UqglmviH9GoBJ5jk='; object-src 'self'"
+}

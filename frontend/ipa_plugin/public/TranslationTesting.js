@@ -1,16 +1,12 @@
-import React from 'react';
 import * as ReactDOM from 'react-dom';
 import axios from 'axios';
-import TranslatedLetter from "./TranslatedLetter";
-import '../letter.css';
+import '../src/letter.css';
 
 const splitText = (word) => {
     return word.split('');
 };
 
-let original_text = "";
-
-class TranslationTesting extends React.Component {
+class TranslationTesting extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -64,6 +60,7 @@ class TranslationTesting extends React.Component {
         return (
             <div>
                 <h2>Hello hello hello</h2>
+                <h4>HIHIHHIHI</h4>
                 <span aria-label={this.state.translationContent}>
             {translatedWordArray.map((character, index) => {
                     return <span className={character} aria-hidden="true" key={index}>{character}</span>;
@@ -76,6 +73,6 @@ class TranslationTesting extends React.Component {
     }
 }
 
-//  ReactDOM.render(<TranslationTesting/>, document.getElementById('text-out'));
+ReactDOM.render(<TranslationTesting/>, document.querySelector('#ipa-container'));
 
-export default TranslationTesting
+export default TranslationTesting;

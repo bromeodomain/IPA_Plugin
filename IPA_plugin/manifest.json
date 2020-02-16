@@ -31,8 +31,8 @@
        }
     ],
     "web_accessible_resources": [
-        "html/toolbar.html",
-        "html/sidebar.html"
+        "toolbar.html",
+        "sidebar.html"
     ],
     "manifest_version": 2
 }
