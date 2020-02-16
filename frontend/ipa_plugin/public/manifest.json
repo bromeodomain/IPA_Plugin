@@ -40,8 +40,8 @@
     }
   ],
   "web_accessible_resources": [
-    "/html/index.html",
-    "/html/toolbar.html",
-    "/html/sidebar.html"
+    "index.html",
+    "toolbar.html",
+    "sidebar.html"
   ]
 }

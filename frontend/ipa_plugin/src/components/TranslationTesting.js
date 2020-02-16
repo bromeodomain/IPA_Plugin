@@ -76,6 +76,6 @@ class TranslationTesting extends React.Component {
     }
 }
 
-ReactDOM.render(<TranslationTesting/>, document.getElementById('text-out'));
+//  ReactDOM.render(<TranslationTesting/>, document.getElementById('text-out'));
 
 export default TranslationTesting

@@ -1,6 +1,6 @@
 var height = '60px';
 var iframe_base = document.createElement('iframe');
-iframe_base.src = chrome.extension.getURL('../html/toolbar.html');
+iframe_base.src = chrome.extension.getURL('toolbar.html');
 iframe_base.style.height = height;
 iframe_base.style.width = '65%';
 iframe_base.style.position = 'fixed';
