@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#000000"/>
     <meta
-      name="description"
-      content="Web site created using create-react-app"
+            name="description"
+            content="Web site created using create-react-app"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png"/>
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -25,10 +25,59 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>IPA+</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <style>
+        .sidebar {
+            position: fixed;
+            height: 100%;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: lightgrey;
+            overflow-x: hidden;
+            padding-top: 16px;
+        }
 
-  </body>
+        .sidebar a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: darkslategrey;
+            display: block;
+        }
+
+        .sidebar a:hover {
+            color: darkslategrey;
+        }
+
+        .main {
+            margin-left: 160px; /* Same as the width of the sidenav */
+            padding: 0px 10px;
+        }
+
+        .outs {
+            background: white;
+            color: black;
+            margin: 5%;
+            padding: 5%;
+        }
+    </style>
+</head>
+<body>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+        <div style="background: lightgrey; height: 100%;">
+            <div class="outs" style="height: 300px; width: 90%;">
+                <div id="text-out">
+                    <p>hi hi hi</p>
+                </div>
+                <h5>Hi!</h5>
+            </div>
+            <div class="outs" style="height: 500px; width: 90%">
+                <div id="vis-out">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
 </html>
