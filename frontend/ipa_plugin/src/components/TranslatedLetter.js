@@ -1,5 +1,5 @@
 import React from 'react';
-import './letter.css';
+import '../letter.css';
 
 class TranslatedLetter extends React.Component {
     constructor() {
@@ -16,8 +16,6 @@ class TranslatedLetter extends React.Component {
 
         );
     }
-
-
 }
 
 export default TranslatedLetter;
