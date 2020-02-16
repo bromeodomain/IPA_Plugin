@@ -38,6 +38,7 @@ class TranslationTesting extends React.Component {
     };
 
     componentDidMount() {
+        console.log(original_text)
         axios.put('http://localhost:8000/translate/2/', {
             original_text: original_text
         }).then(axios.get(
